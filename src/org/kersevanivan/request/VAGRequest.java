@@ -35,7 +35,7 @@ public class VAGRequest implements Subject {
     public void requestStations(String stationname) throws IOException {
         HttpURLConnection con = connect(stationname);
         int status = con.getResponseCode();
-        if( status == 200 ) { // TODO: Implement other states!
+        if( status == 200 ) { // TODO: Implement other states! There are other statuses which can be returned for the request.
             readResponse(con);
         }
         con.disconnect();
@@ -63,12 +63,12 @@ public class VAGRequest implements Subject {
 
     @Override
     public void callObservers() {
-        this.observers.stream().forEach(observer -> observer.update(content.toString()));
+        //TODO: Implement the method, so all observers are called! Hint: This method is called in line 52.
     }
 
     @Override
     public void register(Observer observer) {
-        this.observers.add(observer);
+        // TODO: Register the observers.
     }
 
     @Override

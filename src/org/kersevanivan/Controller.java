@@ -25,9 +25,8 @@ public class Controller implements Observer {
     private final VAGRequest request = new VAGRequest();
 
     public void searchStation(MouseEvent mouseEvent) throws IOException {
-        request.register(this);
-        request.requestStations( station.getText() );
-        request.unregister(this);
+        //TODO: This is called when the search button is pressed. Make a request. The Controller must react somehow
+        // when a response is sent. At least update must be called from somewhere to achieve this. Make it work!
     }
 
     @Override
@@ -35,9 +34,9 @@ public class Controller implements Observer {
         try {
             Json json = new Json();
             HaltestellenAPIResponse stations = json.getStation(value);
-            response.setText( stations.getHaltestellenAsString() );
-            metadata_timestamp.setText("Abfragezeitpunkt: " + stations.getMetadata().getTimestamp()); //TODO: That is not nice! Any Idea why?
-            metadata_version.setText("Version: " + stations.getMetadata().getVersion());
+            String stationsAsText =  stations.getHaltestellenAsString();
+            // TODO: Now we have got the response from the webservice. Insert it into the text area, and metadata_*
+            // fields.
         } catch (IOException e) {
             e.printStackTrace(); // TODO: Log the error somehow.
         }
