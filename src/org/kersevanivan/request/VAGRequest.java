@@ -70,4 +70,9 @@ public class VAGRequest implements Subject {
     public void register(Observer observer) {
         this.observers.add(observer);
     }
+
+    @Override
+    public void unregister(Observer observer) {
+        this.observers.remove(observer);
+    }
 }

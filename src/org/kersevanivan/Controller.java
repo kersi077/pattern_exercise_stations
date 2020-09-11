@@ -21,11 +21,13 @@ public class Controller implements Observer {
     public Label metadata_version;
     @FXML
     public Label metadata_timestamp;
+    // Our call to the rest api.
+    private final VAGRequest request = new VAGRequest();
 
     public void searchStation(MouseEvent mouseEvent) throws IOException {
-        VAGRequest request = new VAGRequest();
         request.register(this);
         request.requestStations( station.getText() );
+        request.unregister(this);
     }
 
     @Override

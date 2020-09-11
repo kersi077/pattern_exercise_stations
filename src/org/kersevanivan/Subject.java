@@ -22,4 +22,10 @@ public interface Subject {
      * @param observer - some concrete observer.
      */
     public void register(Observer observer);
+
+    /**
+     * Deletes the observer.
+     * @param observer - the observer to remove.
+     */
+    public void unregister(Observer observer);
 }
