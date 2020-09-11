@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="sdk_fx11">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/sdk_fx11" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/lib/sdk_fx11" />
+    </NATIVE>
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/sdk_fx11" recursive="false" />
+  </library>
+</component>
