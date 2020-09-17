@@ -13,14 +13,10 @@ import java.io.IOException;
 
 public class Controller implements Observer {
 
-    @FXML
-    public TextField station;
-    @FXML
-    public TextArea response;
-    @FXML
-    public Label metadata_version;
-    @FXML
-    public Label metadata_timestamp;
+    @FXML public TextField station;
+    @FXML public TextArea response;
+    @FXML public Label metadata_version;
+    @FXML public Label metadata_timestamp;
     // Our call to the rest api.
     private final VAGRequest request = new VAGRequest();
 
